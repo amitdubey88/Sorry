@@ -1,1 +1,1178 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>I'm Sorry ❤️</title> <style> * { box-sizing: border-box; margin: 0; padding: 0; } body { min-height: 100vh; overflow: hidden; font-family: "Segoe UI", Arial, sans-serif; background: radial-gradient(circle at top left, #fff0f5, transparent 40%), radial-gradient(circle at bottom right, #ffd1df, transparent 40%), linear-gradient(135deg, #ffdce7, #fff5f8); display: flex; justify-content: center; align-items: center; color: #5c2635; } /* ========================= FLOATING HEARTS ========================== */ .heart { position: fixed; bottom: -60px; font-size: 25px; pointer-events: none; opacity: 0; animation: floatUp linear infinite; } @keyframes floatUp { 0% { transform: translateY(0) rotate(0deg); opacity: 0; } 15% { opacity: 0.7; } 85% { opacity: 0.7; } 100% { transform: translateY(-115vh) rotate(360deg); opacity: 0; } } /* ========================= MAIN CARD ========================== */ .card { width: min(92%, 620px); padding: 45px 30px; text-align: center; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 255, 255, 0.8); border-radius: 30px; box-shadow: 0 25px 70px rgba(150, 55, 85, 0.2); position: relative; z-index: 5; } /* ========================= FLOWER ========================== */ .flower { font-size: 65px; animation: flowerBounce 2s ease-in-out infinite; } @keyframes flowerBounce { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(3deg); } } /* ========================= HEADINGS ========================== */ h1 { margin-top: 10px; font-size: clamp(42px, 9vw, 68px); color: #d6336c; letter-spacing: -2px; } .subtitle { margin-top: 8px; font-size: 20px; color: #7a4050; } .message { max-width: 500px; margin: 25px auto; font-size: 17px; line-height: 1.7; } .highlight { color: #d6336c; font-weight: 700; } /* ========================= FLOWER GARDEN ========================== */ .garden { margin: 25px 0; font-size: 35px; letter-spacing: 7px; animation: gardenSway 3s ease-in-out infinite; } @keyframes gardenSway { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } } /* ========================= BUTTON AREA ========================== */ .buttons { position: relative; min-height: 190px; display: flex; justify-content: center; align-items: center; gap: 25px; overflow: visible; } button { border: none; cursor: pointer; font-family: inherit; font-size: 18px; font-weight: 700; padding: 15px 30px; border-radius: 50px; transition: left 0.22s ease, top 0.22s ease, transform 0.25s ease, background 0.2s ease; } /* ========================= YES BUTTON ========================== */ #yesBtn { background: #e6396f; color: white; box-shadow: 0 8px 25px rgba(230, 57, 111, 0.35); z-index: 10; } #yesBtn:hover { background: #d6285d; } /* ========================= NO BUTTON ========================== */ #noBtn { background: #eeeeee; color: #555; position: relative; z-index: 20; min-width: 105px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); } #noBtn:hover { background: #e3e3e3; } /* ========================= SUCCESS SCREEN ========================== */ #success { display: none; animation: popIn 0.6s ease; } @keyframes popIn { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } } #success h2 { color: #d6336c; font-size: clamp(32px, 7vw, 45px); margin-bottom: 15px; } #success p { font-size: 18px; line-height: 1.7; } .big-heart { font-size: 85px; margin-bottom: 10px; animation: heartbeat 1s infinite; } @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } } /* ========================= FALLING PETALS ========================== */ .petal { position: fixed; top: -40px; font-size: 22px; pointer-events: none; z-index: 100; animation: fall linear forwards; } @keyframes fall { to { transform: translateY(110vh) rotate(720deg); } } /* ========================= MOBILE ========================== */ @media (max-width: 500px) { body { padding: 15px; } .card { padding: 35px 18px; border-radius: 25px; } .flower { font-size: 52px; } h1 { font-size: 48px; } .subtitle { font-size: 17px; } .message { font-size: 15px; } .garden { font-size: 28px; letter-spacing: 2px; } .buttons { min-height: 210px; } button { font-size: 16px; padding: 13px 22px; } } </style> </head> <body> <!-- ================================== FLOATING BACKGROUND HEARTS =================================== --> <div class="heart" style="left: 5%; animation-duration: 8s;"> ❤️ </div> <div class="heart" style="left: 15%; animation-duration: 11s;"> 💕 </div> <div class="heart" style="left: 28%; animation-duration: 9s;"> 💗 </div> <div class="heart" style="left: 42%; animation-duration: 13s;"> ❤️ </div> <div class="heart" style="left: 58%; animation-duration: 10s;"> 💖 </div> <div class="heart" style="left: 72%; animation-duration: 12s;"> 💕 </div> <div class="heart" style="left: 88%; animation-duration: 9s;"> ❤️ </div> <!-- ================================== MAIN CARD =================================== --> <main class="card"> <!-- APOLOGY PAGE --> <section id="apology"> <div class="flower"> 🌷🌸🌷 </div> <h1> I'm Sorry ❤️ </h1> <p class="subtitle"> Okay... I messed up 🥺 </p> <p class="message"> I know I made you upset... <br><br> <span class="highlight"> And I'm really, really sorry. ❤️ </span> <br><br> You mean way too much to me for one stupid mistake to come between us. <br> I'll try to be a little less stupid next time. <br> <small> (No promises though 😂) </small> </p> <div class="garden"> 🌷 🌹 🌸 💐 🌺 🌸 🌹 🌷 </div> <p style="margin-bottom: 15px; font-weight: bold;"> So... will you forgive me? 🥺 </p> <!-- BUTTONS --> <div class="buttons"> <button id="yesBtn" type="button"> Yes ❤️ </button> <button id="noBtn" type="button"> No 😤 </button> </div> </section> <!-- ================================== SUCCESS PAGE =================================== --> <section id="success"> <div class="big-heart"> ❤️ </div> <h2> YAAAAAY! 🥰 </h2> <p> I knew you couldn't stay mad at me forever. 😌 <br><br> Thank you for forgiving me. ❤️ <br><br> Now come here... 🤗 </p> <div class="garden"> 🌹 🌷 💐 🌸 🌺 🌸 💐 🌷 🌹 </div> <p style="font-weight: bold;"> I love you ❤️ </p> </section> </main> <!-- ================================== JAVASCRIPT =================================== --> <script> const yesBtn = document.getElementById("yesBtn"); const noBtn = document.getElementById("noBtn"); const apology = document.getElementById("apology"); const success = document.getElementById("success"); /* * Current YES size */ let yesScale = 1; /* * Count how many times * she tried to click NO. */ let noAttempts = 0; /* * ====================================== * MOVE NO BUTTON * ====================================== */ function moveNoButton(event) { if (event) { event.preventDefault(); } noAttempts++; const card = document.querySelector(".card"); const buttonsArea = document.querySelector(".buttons"); const areaWidth = buttonsArea.clientWidth; const areaHeight = buttonsArea.clientHeight; const buttonWidth = noBtn.offsetWidth; const buttonHeight = noBtn.offsetHeight; /* * Make the button absolute * after the first attempt. */ noBtn.style.position = "absolute"; /* * Keep the button inside * the button area. */ const padding = 10; const maxX = Math.max( padding, areaWidth - buttonWidth - padding ); const maxY = Math.max( padding, areaHeight - buttonHeight - padding ); /* * Current position */ const currentX = parseFloat(noBtn.style.left) || (areaWidth / 2 - buttonWidth / 2); const currentY = parseFloat(noBtn.style.top) || (areaHeight / 2 - buttonHeight / 2); /* * Find a position that is * significantly far away. */ let newX; let newY; let attempts = 0; do { newX = padding + Math.random() * (maxX - padding); newY = padding + Math.random() * (maxY - padding); const distance = Math.sqrt( Math.pow( newX - currentX, 2 ) + Math.pow( newY - currentY, 2 ) ); /* * At least 140px away. */ if ( distance >= 140 || attempts >= 30 ) { break; } attempts++; } while (true); /* * Move NO button. */ noBtn.style.left = `${newX}px`; noBtn.style.top = `${newY}px`; /* * ================================= * MAKE YES BIGGER * ================================= */ yesScale += 0.15; /* * Maximum size. */ if (yesScale > 2.5) { yesScale = 2.5; } yesBtn.style.transform = `scale(${yesScale})`; /* * ================================= * CHANGE NO TEXT * ================================= */ if (noAttempts === 1) { noBtn.innerText = "No 😤"; } else if (noAttempts === 2) { noBtn.innerText = "Are you sure? 🥺"; } else if (noAttempts === 3) { noBtn.innerText = "Really?! 😭"; } else if (noAttempts === 4) { noBtn.innerText = "Think again 😭"; } else if (noAttempts === 5) { noBtn.innerText = "Please? 🥹"; } else { noBtn.innerText = "Just say YES ❤️"; } } /* * ====================================== * DESKTOP * ====================================== */ noBtn.addEventListener( "mouseenter", moveNoButton ); /* * ====================================== * MOBILE * ====================================== */ noBtn.addEventListener( "touchstart", moveNoButton, { passive: false } ); /* * ====================================== * IF SHE SOMEHOW CLICKS NO * ====================================== */ noBtn.addEventListener( "click", moveNoButton ); /* * ====================================== * YES BUTTON * ====================================== */ yesBtn.addEventListener( "click", function () { /* * Hide apology */ apology.style.display = "none"; /* * Show success */ success.style.display = "block"; /* * Start flower shower */ createPetals(); } ); /* * ====================================== * FLOWER / HEART SHOWER * ====================================== */ function createPetals() { const flowers = [ "🌸", "🌹", "🌷", "💮", "🌺", "💕", "❤️", "💖" ]; /* * Create 50 petals. */ for ( let i = 0; i < 50; i++ ) { const petal = document.createElement("div"); petal.className = "petal"; petal.innerText = flowers[ Math.floor( Math.random() * flowers.length ) ]; petal.style.left = Math.random() * 100 + "%"; petal.style.animationDuration = 3 + Math.random() * 5 + "s"; petal.style.animationDelay = Math.random() * 2 + "s"; document.body.appendChild( petal ); /* * Remove after animation. */ setTimeout( () => petal.remove(), 9000 ); } } </script> </body> </html>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I'm Sorry ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+
+            font-family: "Segoe UI", Arial, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #fff0f5,
+                    transparent 40%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #ffd1df,
+                    transparent 40%
+                ),
+                linear-gradient(
+                    135deg,
+                    #ffdce7,
+                    #fff5f8
+                );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #5c2635;
+        }
+
+        /* ==========================
+           FLOATING HEARTS
+        =========================== */
+
+        .heart {
+            position: fixed;
+            bottom: -60px;
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            opacity: 0;
+
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.7;
+            }
+
+            85% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform:
+                    translateY(-115vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* ==========================
+           MAIN CARD
+        =========================== */
+
+        .card {
+            width: min(92%, 620px);
+
+            padding: 45px 30px;
+
+            text-align: center;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.92
+            );
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(150, 55, 85, 0.2);
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        /* ==========================
+           FLOWERS
+        =========================== */
+
+        .flower {
+            font-size: 65px;
+
+            animation:
+                flowerBounce
+                2s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes flowerBounce {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(-3deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-10px)
+                    rotate(3deg);
+            }
+        }
+
+
+        /* ==========================
+           TITLE
+        =========================== */
+
+        h1 {
+            margin-top: 10px;
+
+            font-size:
+                clamp(42px, 9vw, 68px);
+
+            color: #d6336c;
+
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            margin-top: 8px;
+
+            font-size: 20px;
+
+            color: #7a4050;
+        }
+
+
+        /* ==========================
+           MESSAGE
+        =========================== */
+
+        .message {
+            max-width: 500px;
+
+            margin: 25px auto;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+        .highlight {
+            color: #d6336c;
+
+            font-weight: 700;
+        }
+
+
+        /* ==========================
+           FLOWER GARDEN
+        =========================== */
+
+        .garden {
+            margin: 25px 0;
+
+            font-size: 35px;
+
+            letter-spacing: 7px;
+
+            animation:
+                gardenSway
+                3s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes gardenSway {
+
+            0%,
+            100% {
+                transform:
+                    rotate(-2deg);
+            }
+
+            50% {
+                transform:
+                    rotate(2deg);
+            }
+        }
+
+
+        /* ==========================
+           QUESTION
+        =========================== */
+
+        .question {
+            margin-top: 15px;
+
+            font-weight: bold;
+
+            font-size: 18px;
+        }
+
+
+        /* ==========================
+           SEPARATE NO MESSAGE
+        =========================== */
+
+        #noMessage {
+            min-height: 30px;
+
+            margin-top: 10px;
+            margin-bottom: 5px;
+
+            color: #d6336c;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            opacity: 0;
+
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        #noMessage.show {
+            opacity: 1;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* ==========================
+           BUTTON AREA
+        =========================== */
+
+        .buttons {
+            position: relative;
+
+            height: 170px;
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 25px;
+
+            overflow: visible;
+        }
+
+
+        /* ==========================
+           BUTTON BASE
+        =========================== */
+
+        button {
+            border: none;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            padding:
+                15px 30px;
+
+            border-radius: 50px;
+
+            transition:
+                transform 0.25s ease,
+                background 0.2s ease,
+                left 0.22s ease,
+                top 0.22s ease;
+        }
+
+
+        /* ==========================
+           YES BUTTON
+        =========================== */
+
+        #yesBtn {
+            background: #e6396f;
+
+            color: white;
+
+            box-shadow:
+                0 8px 25px
+                rgba(
+                    230,
+                    57,
+                    111,
+                    0.35
+                );
+
+            z-index: 10;
+        }
+
+        #yesBtn:hover {
+            background: #d6285d;
+        }
+
+
+        /* ==========================
+           NO BUTTON
+        =========================== */
+
+        #noBtn {
+            background: #eeeeee;
+
+            color: #555;
+
+            min-width: 105px;
+
+            position: relative;
+
+            z-index: 20;
+
+            box-shadow:
+                0 5px 15px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.08
+                );
+        }
+
+        #noBtn:hover {
+            background: #e3e3e3;
+        }
+
+
+        /* ==========================
+           SUCCESS SCREEN
+        =========================== */
+
+        #success {
+            display: none;
+
+            animation:
+                popIn
+                0.6s
+                ease;
+        }
+
+        @keyframes popIn {
+
+            0% {
+                transform:
+                    scale(0.5);
+
+                opacity: 0;
+            }
+
+            100% {
+                transform:
+                    scale(1);
+
+                opacity: 1;
+            }
+        }
+
+        #success h2 {
+            color: #d6336c;
+
+            font-size:
+                clamp(
+                    32px,
+                    7vw,
+                    45px
+                );
+
+            margin-bottom: 15px;
+        }
+
+        #success p {
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        /* ==========================
+           BIG HEART
+        =========================== */
+
+        .big-heart {
+            font-size: 85px;
+
+            margin-bottom: 10px;
+
+            animation:
+                heartbeat
+                1s
+                infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform:
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    scale(1.2);
+            }
+        }
+
+
+        /* ==========================
+           FALLING PETALS
+        =========================== */
+
+        .petal {
+            position: fixed;
+
+            top: -40px;
+
+            font-size: 22px;
+
+            pointer-events: none;
+
+            z-index: 100;
+
+            animation:
+                fall
+                linear
+                forwards;
+        }
+
+        @keyframes fall {
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+            }
+        }
+
+
+        /* ==========================
+           MOBILE
+        =========================== */
+
+        @media (max-width: 500px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                padding:
+                    35px 18px;
+
+                border-radius: 25px;
+            }
+
+            .flower {
+                font-size: 52px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+            .message {
+                font-size: 15px;
+            }
+
+            .garden {
+                font-size: 27px;
+
+                letter-spacing: 2px;
+            }
+
+            .buttons {
+                height: 190px;
+            }
+
+            button {
+                font-size: 16px;
+
+                padding:
+                    13px 22px;
+            }
+
+            #noMessage {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         FLOATING HEARTS
+    ====================================== -->
+
+    <div
+        class="heart"
+        style="left: 5%; animation-duration: 8s;">
+        ❤️
+    </div>
+
+    <div
+        class="heart"
+        style="left: 15%; animation-duration: 11s;">
+        💕
+    </div>
+
+    <div
+        class="heart"
+        style="left: 28%; animation-duration: 9s;">
+        💗
+    </div>
+
+    <div
+        class="heart"
+        style="left: 42%; animation-duration: 13s;">
+        ❤️
+    </div>
+
+    <div
+        class="heart"
+        style="left: 58%; animation-duration: 10s;">
+        💖
+    </div>
+
+    <div
+        class="heart"
+        style="left: 72%; animation-duration: 12s;">
+        💕
+    </div>
+
+    <div
+        class="heart"
+        style="left: 88%; animation-duration: 9s;">
+        ❤️
+    </div>
+
+
+    <!-- =====================================
+         MAIN CARD
+    ====================================== -->
+
+    <main class="card">
+
+
+        <!-- =================================
+             APOLOGY SCREEN
+        ================================== -->
+
+        <section id="apology">
+
+
+            <div class="flower">
+                🌷🌸🌷
+            </div>
+
+
+            <h1>
+                I'm Sorry ❤️
+            </h1>
+
+
+            <p class="subtitle">
+                Okay... I messed up 🥺
+            </p>
+
+
+            <p class="message">
+
+                I know I made you upset...
+
+                <br><br>
+
+                <span class="highlight">
+                    And I'm really, really sorry. ❤️
+                </span>
+
+                <br><br>
+
+                You mean way too much to me for one
+                stupid mistake to come between us.
+
+                <br>
+
+                I'll try to be a little less stupid
+                next time.
+
+                <br>
+
+                <small>
+                    (No promises though 😂)
+                </small>
+
+            </p>
+
+
+            <div class="garden">
+                🌷 🌹 🌸 💐 🌺 🌸 🌹 🌷
+            </div>
+
+
+            <p class="question">
+                So... will you forgive me? 🥺
+            </p>
+
+
+            <!--
+                SEPARATE MESSAGE
+                This changes independently.
+            -->
+
+            <div id="noMessage">
+                Please choose wisely... 🥺
+            </div>
+
+
+            <!-- =================================
+                 BUTTON AREA
+            ================================== -->
+
+            <div class="buttons">
+
+
+                <!-- YES NEVER MOVES -->
+
+                <button
+                    id="yesBtn"
+                    type="button">
+
+                    Yes ❤️
+
+                </button>
+
+
+                <!--
+                    NO ALWAYS SAYS NO.
+                    ITS TEXT NEVER CHANGES.
+                -->
+
+                <button
+                    id="noBtn"
+                    type="button">
+
+                    No 😤
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             SUCCESS SCREEN
+        ================================== -->
+
+        <section id="success">
+
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+
+            <h2>
+                YAAAAAY! 🥰
+            </h2>
+
+
+            <p>
+
+                I knew you couldn't stay mad at me
+                forever. 😌
+
+                <br><br>
+
+                Thank you for forgiving me. ❤️
+
+                <br><br>
+
+                Now come here... 🤗
+
+            </p>
+
+
+            <div class="garden">
+                🌹 🌷 💐 🌸 🌺 🌸 💐 🌷 🌹
+            </div>
+
+
+            <p style="font-weight: bold;">
+                I love you ❤️
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script>
+
+        const yesBtn =
+            document.getElementById("yesBtn");
+
+        const noBtn =
+            document.getElementById("noBtn");
+
+        const noMessage =
+            document.getElementById("noMessage");
+
+        const apology =
+            document.getElementById("apology");
+
+        const success =
+            document.getElementById("success");
+
+
+        /* ==============================
+           VARIABLES
+        =============================== */
+
+        let yesScale = 1;
+
+        let noAttempts = 0;
+
+
+        /* ==============================
+           NO BUTTON MESSAGES
+
+           IMPORTANT:
+           These are separate from
+           the NO button itself.
+        =============================== */
+
+        const messages = [
+
+            "Please choose wisely... 🥺",
+
+            "Are you really sure? 🥺",
+
+            "Think about it again... 😭",
+
+            "That button isn't the right answer 😭",
+
+            "Why are you doing this to me? 🥹",
+
+            "My heart can't handle this 💔",
+
+            "I'll give you flowers... 🌹",
+
+            "Okay okay... I'll behave 😭",
+
+            "Just forgive me already 🥺❤️",
+
+            "You know you love me 😌❤️"
+
+        ];
+
+
+        /* ==============================
+           MOVE NO BUTTON
+        =============================== */
+
+        function moveNoButton(event) {
+
+            if (event) {
+                event.preventDefault();
+            }
+
+
+            noAttempts++;
+
+
+            const buttonsArea =
+                document.querySelector(
+                    ".buttons"
+                );
+
+
+            const areaWidth =
+                buttonsArea.clientWidth;
+
+            const areaHeight =
+                buttonsArea.clientHeight;
+
+
+            const buttonWidth =
+                noBtn.offsetWidth;
+
+            const buttonHeight =
+                noBtn.offsetHeight;
+
+
+            /*
+             * Convert NO button to
+             * absolute positioning.
+             */
+
+            noBtn.style.position =
+                "absolute";
+
+
+            /*
+             * Keep it completely
+             * inside the button area.
+             */
+
+            const padding = 5;
+
+
+            const maxX =
+                areaWidth -
+                buttonWidth -
+                padding;
+
+
+            const maxY =
+                areaHeight -
+                buttonHeight -
+                padding;
+
+
+            /*
+             * Get current position.
+             */
+
+            const currentX =
+                parseFloat(
+                    noBtn.style.left
+                ) ||
+                (
+                    areaWidth / 2 -
+                    buttonWidth / 2
+                );
+
+
+            const currentY =
+                parseFloat(
+                    noBtn.style.top
+                ) ||
+                (
+                    areaHeight / 2 -
+                    buttonHeight / 2
+                );
+
+
+            let newX;
+
+            let newY;
+
+            let tries = 0;
+
+
+            /*
+             * Keep generating positions
+             * until we find one FAR away.
+             */
+
+            do {
+
+                newX =
+                    padding +
+                    Math.random() *
+                    Math.max(
+                        1,
+                        maxX - padding
+                    );
+
+
+                newY =
+                    padding +
+                    Math.random() *
+                    Math.max(
+                        1,
+                        maxY - padding
+                    );
+
+
+                const distance =
+                    Math.sqrt(
+
+                        Math.pow(
+                            newX - currentX,
+                            2
+                        )
+
+                        +
+
+                        Math.pow(
+                            newY - currentY,
+                            2
+                        )
+
+                    );
+
+
+                /*
+                 * At least 130px away.
+                 */
+
+                if (
+                    distance >= 130 ||
+                    tries >= 40
+                ) {
+                    break;
+                }
+
+
+                tries++;
+
+            } while (true);
+
+
+            /*
+             * Move the button.
+             */
+
+            noBtn.style.left =
+                `${newX}px`;
+
+            noBtn.style.top =
+                `${newY}px`;
+
+
+            /* ==============================
+               CHANGE SEPARATE MESSAGE
+            =============================== */
+
+            const messageIndex =
+                Math.min(
+                    noAttempts - 1,
+                    messages.length - 1
+                );
+
+
+            noMessage.innerText =
+                messages[messageIndex];
+
+
+            noMessage.classList.add(
+                "show"
+            );
+
+
+            /* ==============================
+               MAKE YES BIGGER
+            =============================== */
+
+            yesScale += 0.15;
+
+
+            /*
+             * Maximum YES size.
+             */
+
+            if (yesScale > 2.5) {
+                yesScale = 2.5;
+            }
+
+
+            yesBtn.style.transform =
+                `scale(${yesScale})`;
+
+        }
+
+
+        /* ==============================
+           DESKTOP
+        =============================== */
+
+        noBtn.addEventListener(
+            "mouseenter",
+            moveNoButton
+        );
+
+
+        /* ==============================
+           MOBILE
+        =============================== */
+
+        noBtn.addEventListener(
+            "touchstart",
+            moveNoButton,
+            {
+                passive: false
+            }
+        );
+
+
+        /* ==============================
+           IF SHE MANAGES TO CLICK NO
+        =============================== */
+
+        noBtn.addEventListener(
+            "click",
+            moveNoButton
+        );
+
+
+        /* ==============================
+           YES BUTTON
+        =============================== */
+
+        yesBtn.addEventListener(
+            "click",
+            function () {
+
+                /*
+                 * Hide apology.
+                 */
+
+                apology.style.display =
+                    "none";
+
+
+                /*
+                 * Show success.
+                 */
+
+                success.style.display =
+                    "block";
+
+
+                /*
+                 * Start flower shower.
+                 */
+
+                createPetals();
+
+            }
+        );
+
+
+        /* ==============================
+           FLOWER SHOWER
+        =============================== */
+
+        function createPetals() {
+
+            const flowers = [
+
+                "🌸",
+                "🌹",
+                "🌷",
+                "💮",
+                "🌺",
+                "💕",
+                "❤️",
+                "💖"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 50;
+                i++
+            ) {
+
+                const petal =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                petal.className =
+                    "petal";
+
+
+                petal.innerText =
+                    flowers[
+                        Math.floor(
+                            Math.random() *
+                            flowers.length
+                        )
+                    ];
+
+
+                petal.style.left =
+                    Math.random() * 100 +
+                    "%";
+
+
+                petal.style.animationDuration =
+                    3 +
+                    Math.random() * 5 +
+                    "s";
+
+
+                petal.style.animationDelay =
+                    Math.random() * 2 +
+                    "s";
+
+
+                document.body.appendChild(
+                    petal
+                );
+
+
+                setTimeout(
+                    () => petal.remove(),
+                    9000
+                );
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
